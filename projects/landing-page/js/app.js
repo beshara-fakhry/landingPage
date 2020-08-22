@@ -53,5 +53,27 @@
 // Scroll to section on link click
 
 // Set sections as active
-
+const sections= document.querySelectorAll('section');
+const navList= document.querySelector('ul');
+for(let i=0;i<sections.length;i++){
+const hrefValue=`#${sections[i].id}`;
+const listText=sections[i].getAttribute('data-nav');
+const listItem=document.createElement('li');
+const anch=document.createElement('a');  
+ anch.setAttribute(href,`${hrefValue}`);
+ anch.textContent=listText;
+ listItem.appendChild(anch);
+ navList.appendChild(listItem); 
+}
+const menu=document.querySelectorAll('li');
+for (let i=0;i<sections.length;i++){
+const rect=sections[i].getBoundingClientRect();
+  if(rect.top>=0&&rect.bottom<=window.screen.availHeight){menu[i].style.cssText='background-color:yellow;}
+}
+  const btn=document.getElementById('topBtn');
+  if(document. documentElement.scrollTop>20){
+  btn.style.display='block';
+  btn.addEventListener('click',function(){document.documentElement.scrollTop=0;});
+  }
+  else{btn.style.display='none';}
 
