@@ -69,7 +69,7 @@ const anch=document.createElement('a');  //Create the anchor element
 const menu=document.querySelectorAll('li');
 for (let i=0;i<sections.length;i++){
 const rect=sections[i].getBoundingClientRect();
-  if(rect.top>=0&&rect.bottom<=window.screen.availHeight){menu[i].style.cssText='background-color:yellow;}
+  if(rect.top>=0&&rect.bottom<=window.screen.availHeight){menu[i].style.cssText='background-color:yellow';}
 }
  //Create go to top button 
   const btn=document.getElementById('topBtn');
