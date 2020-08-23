@@ -60,7 +60,7 @@ const hrefValue=`#${sections[i].id}`;
 const listText=sections[i].getAttribute('data-nav');
 const listItem=document.createElement('li');//create the list element
 const anch=document.createElement('a');  //Create the anchor element 
- anch.setAttribute(href,`${hrefValue}`);
+ anch.setAttribute("href",`${hrefValue}`);
  anch.textContent=listText;
  listItem.appendChild(anch);
  navList.appendChild(listItem); 
