@@ -65,6 +65,19 @@ const anch=document.createElement('a');  //Create the anchor element
  listItem.appendChild(anch);
  navList.appendChild(listItem); 
 }
+//highlight the list item on click 
+$(document). ready(function (){
+ $('ul li a').click(function (){
+  $('li a').removeClass("active");
+  $(this).addClass("active");
+ }; );};)
+//scroll to section in case of menu item click 
+for (let i=0;i<sections.length;i++){
+ const listItem=document.querySelectorAll('li');
+ listItem[i].addEventListener('click',function (){
+ sections[i].scrollIntoView({behavior:"smooth"});
+  });
+}
 //Add a highlight to the section at the navigation bar when at ar viewport
 const menu=document.querySelectorAll('li');
 for (let i=0;i<sections.length;i++){
@@ -80,7 +93,8 @@ active.style.backgroundColor='orange';
   const btn=document.getElementById('topBtn');
   if(document. documentElement.scrollTop>20){
   btn.style.display='block';
-  btn.addEventListener('click',function(){document.documentElement.scrollTop=0;});
+  btn.addEventListener('click',function(){document.documentElement.scrollTop=0;
+    btn.scrollIntoView({behavior:"smooth"});                                     });
   }
   else{btn.style.display='none';}
 
