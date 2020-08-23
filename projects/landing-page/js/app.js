@@ -70,7 +70,7 @@ for (let i=0;i<sections.length;i++){
  const listItem=document.querySelectorAll('li');
  listItem[i].addEventListener('click',function (){
  sections[i].scrollIntoView({behavior:"smooth"});
- listItem[i].class list.add("active");
+ listItem[i].classList.add("active");
   });
 }
 //Add a highlight to the section at the navigation bar when at ar viewport
