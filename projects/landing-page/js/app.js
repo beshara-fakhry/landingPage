@@ -71,8 +71,9 @@ for (let i=0;i<sections.length;i++){
 const rect=sections[i].getBoundingClientRect();
   if(rect.top>=0&&rect.bottom<=(window.innerHeight||document.documentElement.clientHeight))
   {menu[i].style.cssText='background-color:yellow';
-  sections[i].addEventListener('scroll',function (){sections[i].classList.add("active");});}
+  sections[i].addEventListener('scroll',function (){sections[i].classList.add("active");});}//add active class to section at viewport
 }
+//styling section at the active state 
 const active =document.querySelector('.active');
 active.style.backgroundColor='orange';
  //Create go to top button 
