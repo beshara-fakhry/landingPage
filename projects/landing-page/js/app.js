@@ -77,10 +77,12 @@ for (let i=0;i<sections.length;i++){
 const menu=document.querySelectorAll('li');
 for (let i=0;i<sections.length;i++){
 const rect=sections[i].getBoundingClientRect();
+ sections[i].addEventListener('scroll',function (){
   if(rect.top>=0&&rect.bottom<=(window.innerHeight||document.documentElement.clientHeight))
-  {menu[i].style.cssText='background-color:yellow';
+  {
    menu[i].classList.add("active");
   sections[i].addEventListener('scroll',function (){sections[i].classList.add("active");});}//add active class to section at viewport
+else {menu[i].classList.remowe("active");}});
 }
 //styling section at the active state 
 const active =document.querySelector('.active');
