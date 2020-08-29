@@ -32,4 +32,4 @@ else {menu[i].classList.remove("active");}});
 }
 //styling the active states
 const activeState =document.querySelector('.active');
-activeState.style.backgroundColor='#00ff00';
+activeState.style.cssText='background-color:#00ff00';
