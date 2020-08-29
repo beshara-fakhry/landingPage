@@ -28,7 +28,7 @@ const border=parts[i].getBoundingClientRect();
   {
    menu[i].classList.add("active");}
   
-else {menu[i].classList.remowe("active");}});
+else {menu[i].classList.remove("active");}});
 }
 //styling the active states
 const activeState =document.querySelector('.active');
